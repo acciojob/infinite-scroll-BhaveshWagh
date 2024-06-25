@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to check if user reached the end of the list
     function checkScroll() {
-        if (list.scrollTop + list.clientHeight >= list.scrollHeight) {
+        if (list.scrollTop + list.clientHeight >= list.scrollHeight - 10) { // Small buffer to ensure it works properly
             addListItems(2);
         }
     }
@@ -25,3 +25,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add scroll event listener
     list.addEventListener('scroll', checkScroll);
 });
+
